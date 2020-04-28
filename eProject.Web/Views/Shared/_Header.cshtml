@@ -1,0 +1,96 @@
+﻿@model eProject.Web.Models.UserData
+
+<!-- Navigation Bar-->
+<!-- Topbar Start -->
+<div class="navbar-custom">
+    <div class="container-fluid">
+        <ul class="list-unstyled topnav-menu float-right mb-0">
+            <li class="dropdown notification-list">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle nav-link">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- End mobile menu toggle-->
+            </li>
+
+
+            @if (Model == null)
+            {
+                <li>
+                    <a class="nav-link nav-user mr-0 waves-effect waves-light" href="@Url.Action("Index", "Login")" role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="pro-user-name ml-1">
+                            Login
+                        </span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a class="nav-link nav-user mr-0 waves-effect waves-light" href="@Url.Action("Index", "Register")" role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="pro-user-name ml-1">
+                            Register
+                        </span>
+                    </a>
+                </li>
+
+
+            }
+            else
+            {
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="pro-user-name ml-1">
+                            @Html.DisplayFor(u => u.Username)<i class="mdi mdi-chevron-down"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="remixicon-account-circle-line"></i>
+                            <span>My Account</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="remixicon-settings-3-line"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <!-- item-->
+                        <a class="dropdown-item notify-item" href="javascript:;" onclick="document.forms[0].submit();">
+                            @using (Html.BeginForm("Logout", "Login", FormMethod.Post))
+                            {
+                                <i class="remixicon-logout-box-line"></i>
+                                <span>Logout</span>
+                            }
+                        </a>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <!-- Topbar Start -->
+
+        <div class="logo-box">
+            <ul class="list-unstyled topnav-menu float-left mb-0">
+                <a href="@Url.Action("Index", "Home")" class="logo">
+                    <span class="logo-lg">
+                        <img src="~/Content/images/TW (3).gif" alt="" height="76">
+                        <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                    </span>
+
+                </a>
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- end Topbar -->

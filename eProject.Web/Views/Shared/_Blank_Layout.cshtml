@@ -1,0 +1,28 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>GRAN Auto Rentals | @ViewBag.Title</title>
+    
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+
+    <!-- App css -->
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/app-min/css")
+    @Styles.Render("~/bundles/icons-min/css")
+
+</head>
+<body>
+@RenderBody()
+<!--Jquery js-->
+@Scripts.Render("~/bundles/jquery/js")
+<!-- Vendor js -->
+@Scripts.Render("~/bundles/vendor/js")
+
+<!-- App js -->
+@Scripts.Render("~/bundles/app-min/js")
+@RenderSection("Scripts", false)
+</body>
+</html>

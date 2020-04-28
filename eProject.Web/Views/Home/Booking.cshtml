@@ -1,0 +1,132 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Booking";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gran Auto Rentals | @ViewBag.Title</title>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+
+    <link href="~/Content/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/app.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar-->
+    <!-- End Navigation Bar-->
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item">GRAN Auto Rentals</li>
+                                <li class="breadcrumb-item active">Booking</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Booking</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate>
+                            <div class="form-group mb-3">
+                                <label for="validationCustom01">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="validationCustom02">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="validationCustom03">Where are you from</label>
+                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <label class="text-muted">Write your number starting with +373 for further registration and date picking.</label>
+                                <div>
+                                    <input type="text" class="form-control" required
+                                           data-parsley-min="12" placeholder="Number" />
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid phone number.
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="custom-control custom-checkbox form-check">
+                                    <input type="checkbox" class="custom-control-input" id="invalidCheck" required>
+                                    <label class="custom-control-label" for="invalidCheck">Agree to <a href="@Url.Action("TermsConditions", "Home")">terms and conditions</a></label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn btn-info btn-xs" type="submit">
+                                Send the data to us
+                            </button>
+                        </form>
+
+                    </div> <!-- end card-body-->
+                </div> <!-- end card-->
+            </div> <!-- end col-->
+
+        </div> <!-- end container -->
+    </div>
+    <!-- end wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+    <!-- Vendor js -->
+    <script src="~/Content/js/vendor.min.js"></script>
+
+    <!-- Modal-Effect -->
+    <script src="~/Content/libs/custombox/custombox.min.js"></script>
+
+    <!-- Validation js (Parsley js) -->
+    <script src="~/Content/libs/parsleyjs/parsley.min.js"></script>
+
+    <!-- validation init -->
+    <script src="~/Content/js/pages/form-validation.init.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="~/Content/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="~/Content/js/pages/sweet-alerts.init.js"></script>
+
+    <!-- App js -->
+    <script src="~/Content/js/app.min.js"></script>
+
+</body>
+</html>

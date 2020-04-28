@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Products";
+}
+@model eProject.Web.Models.UserData
+
+<div class="wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">
+                            <a href="javascript: void(0);">Minton</a>
+                        </li>
+                        <li class="breadcrumb-item active">Products</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Products</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <div id="resultTarget"></div>
+                @if (Model == null)
+                {
+                    <h1>PLEASE LOGIN IN TO VIEW THIS PAGE!</h1>
+                }
+                else
+                {
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>ACTION</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @using (Html.BeginForm("Index", "Product", FormMethod.Post, new { autocomplete = "off" }))
+                        {
+                            foreach (var prod in Model.Products)
+                            {
+                            <tr>
+                                <td>@prod</td>
+                                <td>
+
+                                    <button style="float: right" class="btn btn-primary btn-xs" name="btn"
+                                            type="submit" value="@prod">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+                            }
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </div>
+</div>

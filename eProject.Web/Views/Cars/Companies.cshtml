@@ -1,0 +1,197 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Companies";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gran Auto Rentals | @ViewBag.Title</title>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/app.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar-->
+    <!-- End Navigation Bar-->
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">GRAN Auto Rentals</a></li>
+                                <li class="breadcrumb-item active">Companies</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Companies</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <div class="text-center">
+                            <img src="~/Content/images/companies/audi.gif" class="avatar-xxl mb-1">
+                            <h4 class="mb-1">Audi</h4>
+
+                            <p class="text-muted">Ingolstadt, Germany</p>
+                        </div>
+
+                        <p class="font-14 text-center text-muted">
+                            Audi is a German automobile manufacturer that designs, engineers, produces, markets and distributes luxury vehicles.
+                        </p>
+
+                        <div class="text-center">
+                            <a href="@Url.Action("Audi", "Cars")" class="btn btn-sm btn-secondary">View more info</a>
+                        </div>
+
+
+
+                        <div id="company-1" class="text-center"></div>
+
+                    </div>
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <div class="text-center">
+                            <img src="~/Content/images/Companies/bmw.gif" alt="logo" class="avatar-xxl mb-1">
+                            <h4 class="mb-1">Bayerische Motoren Werke</h4>
+                            <p class="text-muted  font-14">Munich, Germany</p>
+                        </div>
+
+                        <p class="font-14 text-center text-muted">
+                            Bayerische Motoren Werke, commonly referred to as BMW,
+                            is a German multinational company which produces automobiles and motorcycles.
+                        </p>
+
+                        <div class="text-center">
+                            <a href="@Url.Action("BMW", "Cars")" class="btn btn-sm btn-secondary">View more info</a>
+                        </div>
+
+
+                        <div id="company-2" class="text-center"></div>
+
+                    </div>
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <div class="text-center">
+                            <img src="~/Content/images/Companies/merc.gif" alt="logo" class="avatar-xxl mb-1">
+                            <h4 class="mb-1">Mercedes-Benz</h4>
+                            <p class="text-muted  font-14">Stuttgart, Germany</p>
+                        </div>
+
+                        <p class="font-14 text-center text-muted">
+                            Mercedes-Benz is a German global automobile marque
+                            is known for luxury vehicles, vans, trucks, buses, coaches and ambulances.
+                        </p>
+
+                        <div class="text-center">
+                            <a href="@Url.Action("Benz", "Cars")" class="btn btn-sm btn-secondary">View more info</a>
+                        </div>
+
+
+                        <div id="company-3" class="text-center"></div>
+
+                    </div>
+                </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <div class="text-center">
+                            <img src="~/Content/images/Companies/kia.gif" alt="logo" class="avatar-xxl mb-1">
+                            <h4 class="mb-1">Kia Motors</h4>
+                            <p class="text-muted  font-14">Seoul, South Korea</p>
+                        </div>
+
+                        <p class="font-14 text-center text-muted">
+                            Kia Motors Corporation is a South Korean multinational automotive manufacturer.
+                            It is South Korea's second-largest automobile manufacturer following the Hyundai Motor Company.
+                        </p>
+
+                        <div class="text-center">
+                            <a href="@Url.Action("Kia", "Cars")" class="btn btn-sm btn-secondary">View more info</a>
+                        </div>
+
+
+                        <div id="company-4" class="text-center"></div>
+
+                    </div>
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="card-box">
+                        <div class="text-center">
+                            <img src="~/Content/images/Companies/alfa.gif" alt="logo" class="avatar-xxl mb-1">
+                            <h4 class="mb-1">Alfa Romeo</h4>
+                            <p class="text-muted  font-14">Torino, Italy</p>
+                        </div>
+
+                        <p class="font-14 text-center text-muted">
+                            Alfa Romeo Automobiles S.p.A. is an Italian luxury car manufacturer,
+                            a company that would produce and sell special Darracq models for Italy.
+                        </p>
+
+                        <div class="text-center">
+                            <a href="@Url.Action("AlfaRomeo", "Cars")" class="btn btn-sm btn-secondary">View more info</a>
+                        </div>
+
+
+                        <div id="company-5" class="text-center"></div>
+
+                    </div>
+                </div><!-- end col -->
+
+            </div>
+            <!-- end row -->
+            <!-- Modal -->
+
+
+
+        </div> <!-- end container -->
+    </div>
+    <!-- end wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+    <!-- Vendor js -->
+    <script src="~/Content/js/vendor.min.js"></script>
+
+    <!-- Sparkline charts -->
+    <script src="~/Content/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Modal-Effect -->
+    <script src="~/Content/libs/custombox/custombox.min.js"></script>
+
+    <!-- init js -->
+    <script src="~/Content/js/pages/companies.js"></script>
+
+    <!-- App js -->
+    <script src="~/Content/js/app.min.js"></script>
+
+</body>
+</html>

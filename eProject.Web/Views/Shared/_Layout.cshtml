@@ -1,0 +1,49 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>GRAN Auto Rentals | @ViewBag.Title</title>
+        
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="~/images/favicon.ico">
+
+        <!-- App css -->
+        @Styles.Render("~/bundles/bootstrap/css")
+        @Styles.Render("~/bundles/app-min/css")
+        @Styles.Render("~/bundles/icons-min/css")
+    </head>
+
+    <body>
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            @Html.Partial("_Header")
+            @Html.Partial("_NavigationBar")
+        </header>
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <!-- Footer Start -->
+        <section class="content">
+            @RenderBody()
+            @Html.Partial("_Footer")
+
+        </section>
+
+        <!-- Vendor js -->
+        @Scripts.Render("~/bundles/vendor/js")
+
+        <!-- App js -->
+        @Scripts.Render("~/bundles/app-min/js")
+
+        @Scripts.Render("~/bundles/jquery/js")
+        @Scripts.Render("~/bundles/popper/js")
+        @Scripts.Render("~/bundles/slick/js")
+        @Scripts.Render("~/bundles/filtering/js")
+        @Scripts.Render("~/bundles/validation/js")
+        <!---- Handler for local scripts -->
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

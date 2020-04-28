@@ -1,0 +1,107 @@
+﻿@model eProject.Web.Models.UserData
+
+@if (Model == null)
+{
+
+}
+<div class="topbar-menu">
+    <div class="container-fluid">
+        <div id="navigation">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu">
+
+                <li class="has-submenu">
+                    <a href="@Url.Action("Audi", "Cars")">
+                        <i class="fas fa-car"></i>Audi
+                        <div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="@Url.Action("RS6", "Model")">Audi RS6 Avant</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("RS7", "Model")">Audi RS7</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("A8", "Model")">Audi A8L</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="@Url.Action("BMW", "Cars")">
+                        <i class="fas fa-car"></i>BMW
+                        <div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="@Url.Action("M5", "Model")">BMW M5 Competition</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("M8", "Model")">BMW M8 Competition</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("X5", "Model")">BMW X5 M Competition</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("X7", "Model")">BMW X7 M</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="@Url.Action("Benz", "Cars")">
+                        <i class="fas fa-car"></i>Mercedes-Benz
+                        <div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+
+                            <a href="@Url.Action("E63", "Model")">Mercedes-Benz E63</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("C63", "Model")">Mercedes-Benz C63s Coupe</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("S63", "Model")">Mercedes-Benz S63</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="@Url.Action("Kia", "Cars")">
+                        <i class="fas fa-car"></i>Kia
+                        <div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+
+                            <a href="@Url.Action("Stinger", "Model")">Kia Stinger</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="@Url.Action("AlfaRomeo", "Cars")">
+                        <i class="fas fa-car"></i>Alfa Romeo
+                        <div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+
+                            <a href="@Url.Action("Giulia", "Model")">Alfa Romeo Giulia Quadrifoglio GTA M</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- End navigation menu -->
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- end #navigation -->
+    </div>
+    <!-- end container -->
+</div>
+
+

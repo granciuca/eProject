@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "NewProducts";
+}
+@model eProject.Web.Models.ProductsData
+
+<div class="wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">
+                            <a href="javascript: void(0);">Minton</a>
+                        </li>
+                        <li class="breadcrumb-item active">Products</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Products</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true)
+<div class="form-group mb-0 text-center">
+    <label class="succes">@ViewBag.SuccessMessage</label>
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+    @Html.TextBoxFor(model => model.Name, new
+    {
+        @class = "form-control",
+        id = "login",
+        placeholder = "Enter your username",
+        title = "Please enter your username"
+    })
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+    @Html.TextBoxFor(model => model.Description, new
+    {
+        @class = "form-control",
+        id = "email",
+        placeholder = "Enter your email",
+        title = "Please enter your email address"
+    })
+    @Html.ValidationMessageFor(model => model.Description)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Price, new { @class = "control-label" })
+    @Html.TextBoxFor(model => model.Price, new
+    {
+        @class = "form-control",
+        placeholder = "Confirm your password",
+        title = "Please enter your password",
+        type = "password",
+        value = "",
+        name = "password",
+        id = "repeatepassword"
+    })
+    @Html.ValidationMessageFor(model => model.Price)
+</div>
+<hr />
+<div class="form-group mb-0 text-center">
+    <button class="btn btn-primary btn-block" value="Submit" type="submit" href="@Url.Action("Product", "Product")"> Add Product </button>
+</div>
